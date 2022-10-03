@@ -83,4 +83,52 @@ function isEvenOrOdd() {
         }
     }
 }
-console.log(isEvenOrOdd());
+//console.log(isEvenOrOdd());
+
+//6 Im making this extra complicated for extra practice 
+const studentsGrades = {
+    David: {
+        marks: 80,
+    },
+
+    Vinoth: {
+        marks: 77,
+    },
+
+    Divya: {
+        marks: 88,
+    },
+
+    Ishitha: {
+        marks: 95,
+    },
+
+    Thomas: {
+        marks: 68,
+    }
+}
+
+function checkGrade() {
+    let count = 0 
+    for (let key in studentsGrades) {
+        //console.log(studentsGrades[key].marks)
+        if (studentsGrades[key].marks > 89) {
+            studentsGrades[key].grade = "A"
+        } else if (studentsGrades[key].marks > 79) {
+            studentsGrades[key].grade = "B"
+        } else if (studentsGrades[key].marks > 69) {
+            studentsGrades[key].grade = "D"
+        } else {
+            studentsGrades[key].grade = "F"
+        }
+        count++
+    }
+
+}
+
+
+checkGrade()
+
+console.log(studentsGrades);
+
+// I am now realizing that I read the instructions wrong and this is not what they wanted :D but hey at least I refreshed my brain on nested objects.
